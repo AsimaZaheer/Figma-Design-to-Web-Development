@@ -1,9 +1,9 @@
 # Figma-Design-to-Web-Development
-Sparx Project – Figma to Responsive Website Conversion
-This project is a fully responsive website built by converting a Figma UI design into a functional, production-ready webpage.
+# Sparx Project – Figma to Responsive Website Conversion
+<br>This project is a fully responsive website built by converting a Figma UI design into a functional, production-ready webpage.
 The goal was to faithfully replicate the provided design while ensuring pixel-perfect accuracy, clean code structure, and cross-device compatibility.
 
-Key Features
+<strong>Key Features</strong>
 Exact design implementation based on the Figma mockup
 
 Responsive layout optimized for mobile, tablet, and desktop screens
