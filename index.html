@@ -1,0 +1,1178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sparx Technologies</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Outfit', sans-serif;
+  background: linear-gradient(180deg, #f8f6f3, #fdfcfb);
+  color: #111;
+}
+
+/* Navbar */
+.navbar {
+  background: linear-gradient(90deg, #1a1a1a, #2b2b2b);
+  border-radius: 50px;
+  padding: 20px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 1200px;
+  margin: 10px auto;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.nav-links {
+  font-family: 'Outfit';
+  font-weight: 100;
+  display: flex;
+  gap: 40px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.nav-links a:hover {
+  color: #ff4b4b;
+}
+
+/* Button */
+.nav-btn {
+  font-family: 'Sora', sans-serif;
+  background-color: #ff4b4b;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 50px;
+  border: none;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.3s ease;
+}
+
+.nav-btn:hover {
+  background-color: #ff2e2e;
+}
+
+/* Hero Section */
+.hero {
+  width: 90%;
+  max-width: 1200px;
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero-text {
+  max-width: 700px;
+}
+
+.hero-text h1 {
+  font-family: 'Sora';
+  font-size: 4rem;
+  line-height: 1.2;
+  font-weight: 200;
+}
+
+.highlight {
+  background-color: #ff4b4b;
+  color: white;
+  padding: 0 10px;
+  border-radius: 8px;
+}
+
+.hero-text p {
+  margin-top: 15px;
+  font-family: 'Outfit', sans-serif;
+  font-weight: bold;
+  font-size: 1.3rem;
+  line-height: 1.5;
+  color: #444;
+}
+
+.cta-btn {
+  font-family: 'Sora', sans-serif;
+  background-color: #ff4b4b;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 50px;
+  border: none;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.cta-btn:hover {
+  background-color: #ff2e2e;
+}
+
+/* Hero Image */
+.hero-image {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-image img {
+  width: 500px;
+  border-radius: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-image::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(255,75,43,0.6) 0%, rgba(255,65,108,0.3) 50%, transparent 80%);
+  transform: translate(-50%, -50%);
+  filter: blur(100px);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Core Products Section */
+.core-products {
+  background-color: #f5efdc;
+  padding: 60px 20px;
+}
+
+.core-products-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1300px;
+  margin: 0 auto;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.core-products-left {
+  flex: 1;
+  min-width: 700px;
+}
+
+.section-title {
+  font-size: 4rem;
+  font-weight: 200;
+  margin: 0 0 10px;
+  line-height: 1.2;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+  max-width: 700px;
+}
+
+.left-image {
+  margin-top: 30px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.left-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.core-products-right {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.product-card {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column; /* icon upar, text neeche */
+  align-items: flex-start;
+  gap: 10px;
+  text-align: left;
+}
+
+.product-card img {
+  width: 60px;
+  height: 60px;
+}
+
+.product-card h3 {
+  margin: 0 0 8px;
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+.product-card p {
+  margin: 0;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  color: #555;
+}
+
+/* CLAIMS HEADER (title + button aligned right like image) */
+.claims-section{
+  background-color: #f8eff2;
+  padding-bottom: 60px;
+}
+  .claims-header{
+    padding: 100px 100px 40px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:16px;
+    margin:6px 0 18px;
+  }
+  .claims-header .left{
+    display:flex;flex-direction:column;align-items:flex-start
+  }
+  .claims-header .left h2{margin:0;font-size:4rem;font-weight:200;color:#0f1724}
+  .claims-header .left p{margin:6px 0 0;color:#555;font-size:1.1rem;font-weight:bold}
+  /* THE BUTTON (matches image: pill, red, shadow, hover lift, bigger) */
+  .claims-cta{
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .claims-cta .btn{
+    background:#e23333;
+    color:#fff;padding:12px 24px;border-radius:999px;border:0;font-weight:700;cursor:pointer;
+    box-shadow:0 16px 40px rgba(226,51,51,0.18);
+    transition:transform .22s ease, box-shadow .22s ease, filter .22s ease;
+    font-size:15px;
+  }
+  .claims-cta .btn:hover{transform:translateY(-3px);box-shadow:0 22px 52px rgba(226,17,17,0.22);filter:brightness(1.02)}
+
+/* Claims Slider (center image + side peeks) */
+  .claims-section{padding:10px 0}
+  .claims-slider-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 800px;
+    overflow: hidden;
+  }
+  .claims-slider {
+    position: relative;
+    height: 600px;
+    width: 1200px;
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  .claims-slide {
+    min-width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease;
+  }
+  .claims-slide img {
+    width: 1200px;
+    height: 800px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 18px 50px rgba(2,6,23,0.08);
+    border: 8px solid rgba(255,255,255,0.7);
+  }
+  .caption {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 720px;
+    bottom: 18px;
+    background: rgba(14,20,24,0.55);
+    color: #fff;
+    padding: 18px;
+    border-radius: 12px;
+    backdrop-filter: blur(6px);
+    animation: slideUp 0.5s ease forwards;
+  }
+
+  .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 100px;
+        gap: 50px;
+    }
+
+    .text-section {
+        flex: 1;
+    }
+
+    .text-section h1 {
+        font-size: 4rem;
+        font-weight: 200;
+        color: #111;
+        margin-bottom: 30px;
+    }
+
+    .feature {
+        background: white;
+        padding: 25px 25px;
+        border-radius: 50px;
+        margin-bottom: 10px;
+        font-size: 1.5rem;
+        font-weight: 100;
+        color: #111;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        transition: transform 0.2s ease;
+        cursor: pointer;
+    }
+
+    .feature:hover {
+        transform: translateY(-3px);
+    }
+
+    .image-section {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+    }
+
+    .image-section img {
+        width: 110%;
+        max-width: 500px;
+        height: auto;
+        border-radius: 200px 200px 0 0;
+        object-fit: cover;
+        clip-path: ellipse(80% 100% at 50% 50%);
+    }
+
+     .section {
+        position: relative;
+        padding: 80px 20px;
+        text-align: center;
+        background: linear-gradient(to bottom, #faf7f3 0%, #fefbf7 100%);
+    }
+
+    .section p {
+        font-size: 4rem;
+        font-weight: 200;
+        color: #111;
+        max-width: 1050px;
+        margin: auto;
+        line-height: 1;
+    }
+
+    /* Orange decorative shapes */
+    .shape {
+        position: absolute;
+        width:105px;
+        height:40px;
+        background:#ff5c39;
+        clip-path: polygon(8% 6%, 92% 3%, 78% 100%, 12% 92%);
+        margin:30px;
+        box-shadow:0 10px 40px rgba(0,0,0,0.12);
+        transform: rotate(-45deg);
+          }
+
+    .shape-left {
+        top: 10%;
+        left: 5%;
+    }
+
+    .shape-right {
+        bottom: 10%;
+        right: 5%;
+        transform: rotate(45deg);
+    }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateX(-50%) translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+  }
+  .caption h3 {
+    margin: 0 0 6px;
+    font-size: 2rem;
+    font-weight: 100;
+  }
+  .caption p {
+    margin: 0;
+    font-size: 1rem;
+    color: rgba(255,255,255,0.95);
+    line-height: 1.4;
+  }
+
+  .pill-container {
+    display: flex;
+    gap: 15px;
+    padding: 30px;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .pill {
+    padding: 10px 20px;
+    border-radius: 50px;
+    background: white;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 0 0 4px rgba(0,0,0,0.05);
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+
+  .pill.active {
+    background: #e23333;
+    color: white;
+  }
+
+  .pill:hover {
+    background: #ececec;
+  }
+
+/* responsive */
+  @media (max-width:1000px){
+    .hero{flex-direction:column;align-items:flex-start}
+    .hero-image img{width:420px}
+    .claims-slide img {
+      width: 560px;
+      height: 340px;
+    }
+    .caption {
+      width: 560px;
+    }
+    .claims-header {
+      padding: 60px 40px 20px;
+    }
+  }
+  @media (max-width:720px){
+    .nav-links{display:none}
+    .hero-image img{width:100%;max-width:320px}
+    .claims-slide img {
+      width: 100%;
+      max-width: 320px;
+      height: 260px;
+      border-radius: 12px;
+    }
+    .caption {
+      width: calc(100% - 40px);
+      max-width: 320px;
+      bottom: 10px;
+      padding: 12px;
+    }
+    .claims-header{
+      flex-direction:column;
+      align-items:flex-start;
+      gap:10px;
+      padding: 40px 20px 10px;
+    }
+    .claims-cta{align-self:stretch}
+    .pill-container {
+      flex-wrap: wrap;
+    }
+    .slider-nav {
+      display: none;
+    }
+  }
+
+
+  .cardsection {
+        text-align: center;
+        padding: 60px 20px;
+    }
+    .cardsection h2 {
+        font-size: 4rem;
+        font-weight: 200;
+        margin-bottom: 40px;
+    }
+    .cards {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    .card {
+        position: relative;
+        width: 450px;
+        height: auto;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .card img {
+        width: 100%;
+        height: 600px;
+        object-fit: cover;
+        filter: grayscale(100%);
+    }
+    .card-content {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: white;
+        padding: 16px 20px;
+        border-radius: 8px;
+        max-width: 90%;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        text-align: center;
+    }
+    .card-content h3 {
+        font-size: 2.5rem;
+        font-weight: 200;
+        margin: 0 0 6px;
+    }
+    .card-content p {
+        font-size: 1rem;
+        color: #555;
+        margin: 0;
+    }
+
+.trusted-impact {
+  background: linear-gradient(to right, #f9f7f6, #f8f2f0);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.trusted-impact h2 {
+  font-size: 4rem;
+  font-weight: 200;
+  margin-bottom: 50px;
+  color: #000;
+}
+
+.impact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+}
+
+.impact-item {
+  text-align: center;
+}
+
+.impact-item h3 {
+  font-size: 3rem;
+  font-weight: 100;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.impact-item p {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #555;
+  line-height: 1.4;
+}
+
+.divider {
+  width: 2px;
+  height: 150px;
+  background-color: rgba(0,0,0,0.1);
+}
+
+        /* Main footer section */
+        .footer-main {
+            color: white;
+            background: black;
+            border-radius: 20px;
+            padding: 60px 0 40px;
+            justify-content: center;
+            width: 95%;
+            margin-left: 2.5%;
+            margin-bottom: 1.5%;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 60px;
+        }
+
+        .footer-left {
+            flex: 1;
+            max-width: 500px;
+        }
+
+        .footer-left h1 {
+            font-size: 4rem;
+            font-weight: 200;
+            line-height: 1.2;
+            margin-bottom: 30px;
+        }
+
+        .footer-right {
+            flex: 1;
+            max-width: 400px;
+            padding-left: 40px;
+        }
+
+        .footer-right p {
+            font-size: 1.1rem;
+            font-weight: bold;
+            line-height: 1.6;
+            color: #ccc;
+            margin-bottom: 30px;
+        }
+
+        .contact-btn {
+            background-color: white;
+            color: #333;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 25px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .contact-btn:hover {
+            background-color: #f0f0f0;
+            transform: translateY(-1px);
+        }
+
+        .footer-divider {
+            width: 100%;
+            height: 1px;
+            background-color: #444;
+            margin: 40px 0;
+        }
+
+        /* Footer bottom section */
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .footer-column {
+            flex: 1;
+        }
+
+        .footer-column h4 {
+            font-size: 2rem;
+            font-weight: 300;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 12px;
+        }
+
+        .social-icon {
+            width: 35px;
+            height: 35px;
+            background-color: #444;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .social-icon:hover {
+            background-color: #555;
+            transform: translateY(-2px);
+        }
+
+        .footer-info p {
+            color: #aaa;
+            font-size: 1.1rem;
+            font-weight: bold;
+            line-height: 1.5;
+            margin-bottom: 8px;
+        }
+
+        .footer-links a {
+            color: #aaa;
+            text-decoration: none;
+            font-size: 14px;
+            line-height: 1.8;
+            display: block;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .benefits-container {
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                gap: 40px;
+            }
+
+            .footer-right {
+                padding-left: 0;
+            }
+
+            .footer-left h1 {
+                font-size: 36px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 30px;
+            }
+        }
+
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+  <div class="logo">
+    <img src="logo.png" alt="Sparx Technologies">
+  </div>
+
+  <div class="nav-links">
+    <a href="#">About</a>
+    <a href="#">Solutions</a>
+    <a href="#">Solutions</a>
+    <a href="#">Solutions</a>
+    <a href="#">Solutions</a>
+  </div>
+
+  <button class="nav-btn">
+    Explore Our Products →
+  </button>
+</div>
+
+<!-- Hero Section -->
+<section>
+  <div class="hero">
+    <div class="hero-text">
+      <h1>Empowering The Future With Smarter Digital <span class="highlight">Solutions</span></h1>
+      <p>From intelligent insurance automation to real-time video <br>analytics and secure data platforms—Sparx builds <br>solutions that redefine industries.</p>
+      <button class="cta-btn">Talk To Our Experts →</button>
+    </div>
+
+    <div class="hero-image">
+      <img src="Hero Image.png" alt="Hero Image">
+    </div>
+  </div>
+</section>
+
+<!-- Core Products Section -->
+<section class="core-products">
+  <div class="core-products-container">
+
+    <!-- Left Side -->
+    <div class="core-products-left">
+      <h2 class="section-title">Our<br>Core Products</h2>
+      <p class="section-subtitle">
+        Innovative solutions designed to empower businesses across claims <br>management, workforce operations, and AI-driven video intelligence.
+      </p>
+      <div class="left-image">
+        <img src="core-products-left.png" alt="AccuraCore Logo with Smiling Person and Job Dashboard">
+      </div>
+    </div>
+
+    <!-- Right Side -->
+    <div class="core-products-right">
+
+      <div class="product-card">
+        <img src="accura.png" alt="AccuraCore Icon">
+        <h3>AccuraCore</h3>
+        <p>A Robust, Secure, And Scalable Cloud-Native Infrastructure Platform Powering Enterprise-Level Digital Solutions</p>
+      </div>
+
+      <div class="product-card">
+        <img src="claimcore-icon.png" alt="ClaimCore Icon">
+        <h3>ClaimCore</h3>
+        <p>An End-To-End Claim Management Platform Tailored For US Insurance Companies—Automate FNOL, Documents, Approvals, And Compliance.</p>
+      </div>
+
+      <div class="product-card">
+        <img src="accuracam-icon.png" alt="AccuraCam Icon">
+        <h3>AccuraCam</h3>
+        <p>AI-Powered Video Intelligence For Fleet Monitoring, Smart Campuses, And Real-Time Emergency Alerts With Edge Computing.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CLAIMS (with button on the right like image) -->
+<section class="claims-section">
+  <div class="claims-header">
+    <div class="left">
+      <h2>Claims Command Center</h2>
+      <p>A next-gen dashboard providing real-time claims tracking, fraud detection insights, and workflow automation.</p>
+    </div>
+
+    <div class="claims-cta">
+      <button class="btn" id="demoBtn">See The Platform In Action →</button>
+    </div>
+  </div>
+
+  <div class="pill-container">
+      <button class="pill" data-index="0">Real-Time Collaboration</button>
+      <button class="pill" data-index="1">Audit & Compliance Dashboard</button>
+      <button class="pill" data-index="2">Rule-Based Automation</button>
+      <button class="pill" data-index="3">API Integrations</button>
+      <button class="pill" data-index="4">Document & Image Management</button>
+  </div>
+
+  <div class="claims-slider-container">
+    <div class="claims-slider">
+      <!-- Slide 1 -->
+      <div class="claims-slide">
+        <img src="Real-Time Collaboration.png" alt="Real-Time Collaboration">
+        <div class="caption">
+          <h3>Real-Time Collaboration</h3>
+          <p>Enable seamless communication between adjusters, agents, and claimants with our integrated chat and notification system.</p>
+        </div>
+      </div>
+      
+      <!-- Slide 2 -->
+      <div class="claims-slide">
+        <img src="Audit & Compliance Dashboard.png" alt="Audit & Compliance Dashboard">
+        <div class="caption">
+          <h3>Audit & Compliance Dashboard</h3>
+          <p>Track every claim action with comprehensive audit trails and automated compliance checks against state regulations.</p>
+        </div>
+      </div>
+      
+      <!-- Slide 3 -->
+      <div class="claims-slide">
+        <img src="Rule-Based Automation.png" alt="Rule-Based Automation">
+        <div class="caption">
+          <h3>Rule-Based Automation</h3>
+          <p>Automate routine claim tasks with our powerful rules engine that adapts to your business workflows.</p>
+        </div>
+      </div>
+      
+      <!-- Slide 4 -->
+      <div class="claims-slide">
+        <img src="API Integrations.png" alt="API Integrations">
+        <div class="caption">
+          <h3>API Integrations</h3>
+          <p>Connect with third-party services, payment gateways, and legacy systems through our robust API ecosystem.</p>
+        </div>
+      </div>
+      
+      <!-- Slide 5 -->
+      <div class="claims-slide">
+        <img src="Document & Image Management.png" alt="Document & Image Management">
+        <div class="caption">
+          <h3>Document & Image Management</h3>
+          <p>Ensure every document and image is accessible, organized, and version-controlled—empower your team with real-time updates.</p>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="text-section">
+        <h1>Why<br>Choose<br>Sparx?</h1>
+        <div class="feature">Enterprise-Grade Security</div>
+        <div class="feature">US Insurance Market Expertise</div>
+        <div class="feature">Scalable Cloud Infrastructure</div>
+        <div class="feature">Smart AI-Powered Monitoring</div>
+        <div class="feature">99.99% Uptime & Support SLA</div>
+    </div>
+
+    <div class="image-section">
+        <img src="Why Choose Sparx_.png" alt="Person working">
+    </div>
+</div>
+</section>
+
+<section class="section">
+    <div class="shape shape-left"></div>
+    <p>
+        Our software enables AI-augmented <br>decisions across critical insurer and <br>contractor workflows—from office <br>operations to field execution.
+    </p>
+    <div class="shape shape-right"></div>
+
+</section>
+
+<section>
+<div class="cardsection">
+    <h2>Industries Served</h2>
+    <div class="cards">
+        <div class="card">
+            <img src="Insurance Providers.png" alt="Insurance Providers">
+            <div class="card-content">
+                <h3>Insurance Providers</h3>
+            </div>
+        </div>
+        <div class="card">
+            <img src="Contractors & Field Ops.png" alt="Contractors & Field Ops">
+            <div class="card-content">
+                <h3>Contractors & Field Ops</h3>
+                <p>Manage jobs and work orders with real-time task tracking, updates, and seamless coordination across teams."</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="Property Managers.png" alt="Property Managers">
+            <div class="card-content">
+                <h3>Property Managers</h3>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+<section class="trusted-impact">
+  <h2>Trusted Impact</h2>
+  <div class="impact-container">
+    <div class="impact-item">
+      <h3>2M</h3>
+      <p>Recovered warranty<br>and claim funds</p>
+    </div>
+    <div class="divider"></div>
+    <div class="impact-item">
+      <h3>30–50%</h3>
+      <p>Reduction in billing errors<br>and manual processing time</p>
+    </div>
+    <div class="divider"></div>
+    <div class="impact-item">
+      <h3>99.9%</h3>
+      <p>Integrated audit history and<br>compliance reporting</p>
+    </div>
+  </div>
+</section>
+
+ <!-- Main Footer -->
+    <footer class="footer-main">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <h1>Let's Work<br>Together</h1>
+                </div>
+                <div class="footer-right">
+                    <p>AllClaims blends technology and process design to transform claims into faster, smarter, and more seamless experiences.</p>
+                    <button class="contact-btn">Contact Us</button>
+                </div>
+            </div>
+
+            <div class="footer-divider"></div>
+
+            <div class="footer-bottom">
+                <div class="footer-column">
+                    <h4>Logo</h4>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon">f</a>
+                        <a href="#" class="social-icon">𝕏</a>
+                        <a href="#" class="social-icon">in</a>
+                        <a href="#" class="social-icon">@</a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Address</h4>
+                    <div class="footer-info">
+                        <p>356, road - 3, New York,</p>
+                        <p>United State</p>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Contact Us</h4>
+                    <div class="footer-info">
+                        <p>+0123 57896857</p>
+                        <p>+0123 57896857</p>
+                        <p>xyzfreebook@gmail.com</p>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Our Policies</h4>
+                    <div class="footer-links">
+                        <a href="#">Privacy Policies</a>
+                        <a href="#">Terms of use</a>
+                        <a href="#">Refund Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+<script>
+  // Carousel functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    const slider = document.querySelector('.claims-slider');
+    const slides = document.querySelectorAll('.claims-slide');
+    const pills = document.querySelectorAll('.pill');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    let currentIndex = 0;
+    let autoSlideInterval;
+    
+    // Initialize
+    updateSlider();
+    startAutoSlide();
+    
+    // Navigation functions
+    function goToSlide(index) {
+      currentIndex = index;
+      updateSlider();
+      resetAutoSlide();
+    }
+    
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % slides.length;
+      updateSlider();
+      resetAutoSlide();
+    }
+    
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+      updateSlider();
+      resetAutoSlide();
+    }
+    
+    function updateSlider() {
+      slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+      
+      // Update pills
+      pills.forEach((pill, index) => {
+        if (index === currentIndex) {
+          pill.classList.add('active');
+        } else {
+          pill.classList.remove('active');
+        }
+      });
+    }
+    
+    // Auto slide functionality
+    function startAutoSlide() {
+      autoSlideInterval = setInterval(nextSlide, 5000);
+    }
+    
+    function resetAutoSlide() {
+      clearInterval(autoSlideInterval);
+      startAutoSlide();
+    }
+    
+    // Event listeners
+    pills.forEach(pill => {
+      pill.addEventListener('click', function() {
+        const index = parseInt(this.getAttribute('data-index'));
+        goToSlide(index);
+      });
+    });
+    
+    prevBtn.addEventListener('click', prevSlide);
+    nextBtn.addEventListener('click', nextSlide);
+    
+    // Pause auto slide on hover
+    const sliderContainer = document.querySelector('.claims-slider-container');
+    sliderContainer.addEventListener('mouseenter', () => {
+      clearInterval(autoSlideInterval);
+    });
+    
+    sliderContainer.addEventListener('mouseleave', () => {
+      resetAutoSlide();
+    });
+    
+    // Touch support for mobile
+    let touchStartX = 0;
+    let touchEndX = 0;
+    
+    sliderContainer.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    }, {passive: true});
+    
+    sliderContainer.addEventListener('touchend', (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      handleSwipe();
+    }, {passive: true});
+    
+    function handleSwipe() {
+      if (touchEndX < touchStartX - 50) {
+        nextSlide();
+      }
+      if (touchEndX > touchStartX + 50) {
+        prevSlide();
+      }
+    }
+  });
+
+  // demo: click behavior for the CTA (opens larger view / can be wired to modal)
+  document.getElementById('demoBtn').addEventListener('click', function(){
+    // simple behavior: open the big slide image in a new tab (you can change to modal)
+    const img = document.querySelector('.claims-slide.active img').src;
+    if(img) window.open(img, '_blank');
+  });
+
+  // optional: subtle gentle pulse to draw attention (unobtrusive)
+  (function(){
+    const btn = document.getElementById('demoBtn');
+    if(!btn) return;
+    let t = 0;
+    setInterval(()=>{
+      t++;
+      if(t % 10 === 0){
+        btn.style.transform = 'translateY(-4px) scale(1.01)';
+        btn.style.boxShadow = '0 26px 60px rgba(226,17,17,0.22)';
+        setTimeout(()=>{ btn.style.transform='translateY(0)'; btn.style.boxShadow='0 16px 40px rgba(226,51,51,0.18)'; }, 420);
+      }
+    },1000);
+  })();
+</script>
+
+</body>
+</html>
